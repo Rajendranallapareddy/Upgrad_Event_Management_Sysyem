@@ -1,0 +1,30 @@
+<!-- Admin Login Page Template -->
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="fas fa-lock me-2"></i>Admin Login</h4>
+            </div>
+            <div class="card-body">
+                <form id="login-form" novalidate>
+                    <div class="mb-3">
+                        <label for="login-email" class="form-label required-field">Email address</label>
+                        <input type="email" class="form-control" id="login-email" value="admin@upgrad.com" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="login-password" class="form-label required-field">Password</label>
+                        <input type="password" class="form-control" id="login-password" value="12345" required>
+                        <div class="invalid-feedback">Please enter your password.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <div class="mt-3 text-muted small">
+                    <p class="mb-1"><strong>Demo credentials:</strong></p>
+                    <p class="mb-0">Email: admin@upgrad.com</p>
+                    <p class="mb-0">Password: 12345</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+<!-- Admin Events Management Page Template -->
+<div class="row mb-4">
+    <div class="col-12">
+        <h2 class="text-primary">Event Management</h2>
+    </div>
+</div>
+
+<!-- Add New Event Form -->
+<div class="card shadow mb-4">
+    <div class="card-header bg-success text-white">
+        <h5 class="mb-0"><i class="fas fa-plus-circle me-2"></i>Add New Event</h5>
+    </div>
+    <div class="card-body">
+        <form id="add-event-form" novalidate>
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label for="event-id" class="form-label required-field">Event ID</label>
+                    <input type="text" class="form-control" id="event-id" required pattern="[A-Za-z0-9-]+">
+                    <div class="invalid-feedback">Alphanumeric and hyphens only.</div>
+                </div>
+                <div class="col-md-8">
+                    <label for="event-name" class="form-label required-field">Event Name</label>
+                    <input type="text" class="form-control" id="event-name" required>
+                    <div class="invalid-feedback">Please enter event name.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="event-category" class="form-label required-field">Category</label>
+                    <select class="form-select" id="event-category" required>
+                        <option value="">Choose...</option>
+                        <option value="Tech & Innovations">Tech & Innovations</option>
+                        <option value="Industrial Events">Industrial Events</option>
+                        <option value="Leadership">Leadership</option>
+                        <option value="Workshop">Workshop</option>
+                    </select>
+                    <div class="invalid-feedback">Please select a category.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="event-date" class="form-label required-field">Date</label>
+                    <input type="date" class="form-control" id="event-date" required>
+                    <div class="invalid-feedback">Please select a date.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="event-time" class="form-label required-field">Time</label>
+                    <input type="time" class="form-control" id="event-time" required>
+                    <div class="invalid-feedback">Please select a time.</div>
+                </div>
+                <div class="col-md-3">
+                    <label for="event-url" class="form-label required-field">Event URL</label>
+                    <input type="url" class="form-control" id="event-url" required placeholder="https://">
+                    <div class="invalid-feedback">Please enter a valid URL.</div>
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-success">Add Event</button>
+                    <button type="reset" class="btn btn-outline-secondary">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Search Events -->
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="event-search" placeholder="Search events by ID, name or category...">
+                    <button class="btn btn-primary" type="button" id="search-btn">
+                        <i class="fas fa-search"></i> Search
+                    </button>
+                    <button class="btn btn-outline-secondary" type="button" id="clear-search">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Events Display -->
+<div class="row g-4" id="admin-events-container">
+    <!-- Events will be dynamically loaded here -->
+</div>

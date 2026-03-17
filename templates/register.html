@@ -1,0 +1,46 @@
+<!-- Event Registration Page Template -->
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Event Registration</h4>
+            </div>
+            <div class="card-body">
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <p><strong>Event ID:</strong> <span id="reg-event-id"></span></p>
+                        <p><strong>Category:</strong> <span id="reg-category"></span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Event Name:</strong> <span id="reg-event-name"></span></p>
+                        <p><strong>Date & Time:</strong> <span id="reg-datetime"></span></p>
+                    </div>
+                </div>
+                
+                <form id="registration-form" novalidate>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="first-name" class="form-label required-field">First Name</label>
+                            <input type="text" class="form-control" id="first-name" required>
+                            <div class="invalid-feedback">Please enter your first name.</div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="last-name" class="form-label required-field">Last Name</label>
+                            <input type="text" class="form-control" id="last-name" required>
+                            <div class="invalid-feedback">Please enter your last name.</div>
+                        </div>
+                        <div class="col-12">
+                            <label for="reg-email" class="form-label required-field">Email Address</label>
+                            <input type="email" class="form-control" id="reg-email" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="col-12 mt-4">
+                            <button type="submit" class="btn btn-primary w-100">Complete Registration</button>
+                            <button type="button" class="btn btn-outline-secondary w-100 mt-2" id="back-to-home">Back to Home</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
